@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Sign in & Sign up Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="/login" method="POST" class="sign-in-form" autocomplete="off">
+                    <h2 class="title">Login</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="email" required name="email" autocomplete="false" placeholder="Email..." />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" placeholder="Password" required />
+                    </div>
+                    <input type="submit" value="Login" class="btn solid" />
+                    <p class="social-text">Or Login with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+                <form action="/register" method="POST" class="sign-up-form">
+                    <h2 class="title">Sign Up</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="username" placeholder="Username" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="contact" placeholder="Contact number" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" placeholder="Password" required />
+                    </div>
+
+                    <div class="input-field usersType">
+                        <select onchange="yesnoCheck(this);" name="usertype" required>
+                            <option value="" disabled selected>Type Of Users</option>
+                            <option value="reguser">Regular User</option>
+                            <option value="ngo">NGO</option>
+                            <option value="hotel">Hotel</option>
+                        </select>
+                    </div>
+
+
+
+                    <div id="ifYes" style="display: none;">
+                        <div class="input-field" style="width: 100%">
+
+                            <input type="text" placeholder="Work You Do" />
+                        </div>
+                        <div class="input-field">
+
+                            <input type="number" placeholder="Year Of Establishment" />
+                        </div>
+                        <div class="input-field">
+
+                            <input type="file" id="files" class="hidden" style="display: none;">
+                            <label for="files">Kindly Upload Your Certicates</label>
+                        </div>
+                    </div>
+
+                    <div id="ifY" style="display: none;">
+                        <div class="input-field">
+                            <label for="">Type of food</label>
+                            <input type="radio" id="veg" value="VEG">   <label for="veg">Veg</label><br>   <input type="radio" id="nonveg" value="NV">   <label for="nonveg">Non-veg</label><br>
+                            <input type="radio" id="jain" value="JAIN">   <label for="jain">Jain</label>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <input type="submit" class="btn" value="Sign Up" />
+                    <p class="social-text">Or Sign Up through social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Wanna see others happy ?</h3>
+                    <p>
+                        You were born with the ability to change someone's life.Don't waste it!!
+                    </p>
+                    <button class="btn transparent" id="sign-up-btn">
+                        Sign Up
+                    </button>
+                </div>
+                <img src="/images/log.png" class="image" alt="" />
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>One of us ?</h3>
+                    <p>
+                        Lend a Helping Hand...
+                    </p>
+                    <button class="btn transparent" id="sign-in-btn">
+                        Login
+                    </button>
+                </div>
+                <img src="/images/HH-logo.png" class="image" alt="" id="hh" />
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/auth.js"></script>
+</body>
+
+</html>

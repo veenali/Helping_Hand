@@ -1,0 +1,62 @@
+<%- include('./header') %>
+    <link rel="stylesheet" href="/css/card.css">
+
+    <body>
+        <div class="wrapper">
+            <%- include('./topnav') %>
+
+                <div class="main_body">
+                    <%- include('./sidenav.ejs', {home:0, about:0, donation:1, events:0, status:0}) %>
+
+                        <div class="container-home">
+                            <section>
+                                <% for( let item of list ) { %>
+                                    <figure class="card">
+                                        <div class="card__hero">
+                                            <img src="<%= item.img %>" alt="" class="card__img" />
+                                            <div class="card__middle">
+                                                <p class="card__middle-text">
+                                                    <%= item.NGOName %>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card__content">
+                                            <div class="card__info">
+                                                <h5 class="card__price"></h5>
+                                                <p class="card__address">
+                                                    <%= item.address %>
+                                                        <!-- Neelambari 501, Road No 86, Off Gokhale Road, Dadar (W) Mumbai 400028 Maharashtra -->
+                                                </p>
+                                                <p class="card__details">
+                                                    REQUIREMENTS:<br />
+                                                    <% for( let index = 0; index < item.requirements.length; index++ ) { %>
+                                                        <%= index+1 %>.
+                                                            <%= item.requirements[index] %>
+                                                                <br>
+                                                                <% } %>
+                                                </p>
+                                            </div>
+                                            <div class="card__buttons">
+                                                <a href="#" class="card__btn">View Programs</a>
+                                                <a href="/donate/fillDetails/<%= item._id %>" class="card__btn" target="_blank">Donate</a>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                    <% } %>
+                            </section>
+                        </div>
+                </div>
+
+
+
+                <!-- CHAT BAR BLOCK -->
+                <%- include('./chatbot') %>
+
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <script src="/js/responses.js"></script>
+                    <script src="/js/chat.js"></script>
+                    <script></script>
+    </body>
+
+    </html>

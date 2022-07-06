@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/card.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <% for( let item of list ) { %>
+            <figure class="card">
+                <div class="card__hero">
+                    <img src="<%= item.img %>" alt="" class="card__img" />
+                    <div class="card__middle">
+                        <p class="card__middle-text">
+                            <%= item.NGOName %>
+                        </p>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <div class="card__info">
+                        <h5 class="card__price"></h5>
+                        <p class="card__address">
+                            <%= item.address %>
+                                <!-- Neelambari 501, Road No 86, Off Gokhale Road, Dadar (W) Mumbai 400028 Maharashtra -->
+                        </p>
+                        <p class="card__details">
+                            REQUIREMENTS:<br />
+                            <% for( let index = 0; index < item.requirements.length; index++ ) { %>
+                                <%= index+1 %>.
+                                    <%= item.requirements[index] %>
+                                        <br>
+                                        <% } %>
+                        </p>
+                    </div>
+                    <div class="card__buttons">
+                        <a href="#" class="card__btn">View Programs</a>
+                        <a href="/donate/fillDetails" class="card__btn" target="_blank">Donate</a>
+                    </div>
+                </div>
+            </figure>
+            <% } %>
+                <!-- <figure class="card">
+                    <div class="card__hero">
+                        <img src="/images/ngo1.jpg" alt="" class="card__img" />
+                        <div class="card__middle">
+                            <p class="card__middle-text">Akshara Centre</p>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__info">
+                            <h5 class="card__price"></h5>
+                            <p class="card__address">
+                                Neelambari 501, Road No 86, Off Gokhale Road, Dadar (W) Mumbai 400028 Maharashtra
+                            </p>
+                            <p class="card__details">
+                                REQUIREMENTS:<br />1.Need 50 kgs of wheat grains<br />2.SSC textbooks
+                            </p>
+                        </div>
+                        <div class="card__buttons">
+                            <a href="#" class="card__btn">View Programs</a>
+                            <a href="/donate/fillDetails" class="card__btn" target="_blank">Donate</a>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure class="card">
+                    <div class="card__hero">
+                        <img src="/images/ngo2.jpg" alt="" class="card__img" />
+                        <div class="card__middle">
+                            <p class="card__middle-text">Antarang Foundation</p>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__info">
+                            <h5 class="card__price"></h5>
+                            <p class="card__address">
+                                231/C, Tawripada Compound, Dr Ss Rao Road, Lalbaug, Parel, Mumbai 400012 Maharashtra
+                            </p>
+                            <p class="card__details">
+                                REQUIREMENTS:<br />1.School Stationary<br />2.Warm Clothes
+                            </p>
+                        </div>
+                        <div class="card__buttons">
+                            <a href="#" class="card__btn">View Programs</a>
+                            <a href="form.html" class="card__btn"> Donate</a>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure class="card">
+                    <div class="card__hero">
+                        <img src="/images/ngo3.jpg" alt="" class="card__img" />
+                        <div class="card__middle">
+                            <p class="card__middle-text">Educate Girls</p>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__info">
+                            <h5 class="card__price"></h5>
+                            <p class="card__address">
+                                Suite No. 411, Fourth Floor Reliable Business Centre, Off New Link Road Oshiwara, Andheri (West),
+                            </p>
+                            <p class="card__details">
+                                REQUIREMENTS:<br />1.Sanitary Pads<br />2.Food and Beverages
+                            </p>
+                        </div>
+                        <div class="card__buttons">
+                            <a href="#" class="card__btn">View Programs</a>
+                            <a href="form.html" class="card__btn"> Donate</a>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure class="card">
+                    <div class="card__hero">
+                        <img src="/images/ngo5.jpg" alt="" class="card__img" />
+                        <div class="card__middle">
+                            <p class="card__middle-text">Akshara Centre</p>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__info">
+                            <h5 class="card__price"></h5>
+                            <p class="card__address">
+                                Neelambari 501, Road No 86, Off Gokhale Road, Dadar (W) Mumbai 400028 Maharashtra
+                            </p>
+                            <p class="card__details">
+                                REQUIREMENTS:<br />1.Need 50 kgs of wheat grains<br />2.SSC textbooks
+                            </p>
+                        </div>
+                        <div class="card__buttons">
+                            <a href="#" class="card__btn">View Programs</a>
+                            <a href="form.html" class="card__btn"> Donate</a>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure class="card">
+                    <div class="card__hero">
+                        <img src="/images/ngo4.jpg" alt="" class="card__img" />
+                        <div class="card__middle">
+                            <p class="card__middle-text">Aadhar Foundation</p>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__info">
+                            <h5 class="card__price"></h5>
+                            <p class="card__address">
+                                Room no.50,Gajanan society, lalbatti,hanuman tekdi, asalpha village, ghatkopar(w)Mumbai-400 84
+                            </p>
+                            <p class="card__details">
+                                REQUIREMENTS:<br />1.Medicines<br />2.Story Books
+                            </p>
+                        </div>
+                        <div class="card__buttons">
+                            <a href="#" class="card__btn">View Programs</a>
+                            <a href="form.html" class="card__btn"> Donate</a>
+                        </div>
+                    </div>
+                </figure> -->
+
+
+    </section>
+
+
+
+
+</body>
+
+</html>

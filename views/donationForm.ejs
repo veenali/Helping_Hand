@@ -1,0 +1,76 @@
+<%- include('./partials/header') %>
+    <link rel="stylesheet" href="/css/form.css">
+
+
+    <div class="container">
+        <form action="/donate" method="POST">
+            <!-- onsubmit="donation(event)" -->
+            <h2 style="margin-bottom: 20px;">
+                <center>Donate to spread smiles :)</center>
+            </h2>
+
+            <div class="row" style="margin-bottom: 18px;">
+                <div class="col-25">
+                    <label for="NGOName">NGO name:</label>
+                </div>
+                <div class="col-75 ngoName-bgColor">
+                    <input readonly type="text" id="NGOName" value="<%= ngo.NGOName %> " name="NGOName" placeholder="NGO name....">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="username">Enter your name:</label>
+                </div>
+                <div class="col-75">
+                    <input required type="text" id="username" name="username" placeholder="Your full name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Enter your email address:</label>
+                </div>
+                <div class="col-75">
+                    <input required type="email" id="email" name="email" placeholder="Your email id..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="address">Enter Your Pick Up Address:</label>
+                </div>
+                <div class="col-75">
+                    <input required type="text" id="pickupAddress" name="pickupAddress" placeholder="Pick up point..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="category">What Are You Donating?</label>
+                </div>
+                <div class="col-75">
+                    <select id="category" name="category" required>
+            <option value="health-related">Health Related</option>
+            <option value="food-and-beverages">Food And Beverages</option>
+            <option value="raw-food">Raw Foods</option>
+            <option value="school-stationary">School Stationary</option>
+            <option value="basic-necessities">Basic Necessities</option>
+          </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="additionalDetails">Product Details:</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="additionalDetails" name="additionalDetails" placeholder="Provide details of the items donated...." style="height:200px"></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input required type="submit" value="Donate 💖">
+            </div>
+        </form>
+    </div>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script> -->
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+    <script src="/js/socket.js"></script>

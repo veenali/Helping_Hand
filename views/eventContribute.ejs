@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <form id="contributeForm">
+            <h2 style="margin-bottom: 20px;">
+                <center>lorem ipsum :)</center>
+            </h2>
+            <div class="row" style="margin-bottom: 18px;">
+                <div class="col-25">
+                    <label for="cause">For the cause</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" style="background-color: #cac8c8;" name="cause" value="<%= event.EventName %> " id="cause" placeholder="Cause...." readonly>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 18px;">
+                <div class="col-25">
+                    <label for="goalAmount">Goal Amount</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" style="background-color: #cac8c8;" name="goalAmount" value="<%= event.goalAmount %> " id="goalAmount" placeholder="Goal Amount...." readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="contributionAmount">Contribution Amount:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="contributionAmount" name="contributionAmount" placeholder="Contribution amount in Rs....." required></input>
+                </div>
+            </div>
+            <div class="row">
+                <input required type="submit" id="contributeBtn" value="Donate 💖">
+            </div>
+        </form>
+
+    </div>
+
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        var email = '<%- email %>'
+        var contact = '<%- contact %>'
+        var goalAmount = '<%- event.goalAmount %>'
+        var username = '<%- username %>'
+        var eventId = '<%- event._id %>'
+    </script>
+    <script src="/js/contribute.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script> -->
+    <!-- <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script> -->
+    <!-- <script src="/js/socket.js"></script> -->
+</body>
+
+</html>

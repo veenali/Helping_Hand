@@ -1,0 +1,53 @@
+<%- include('./partials/header')  %>
+
+    <body>
+        <div class="wrapper">
+            <%- include('./partials/alert') %>
+
+                <%- include('./partials/topnav') %>
+
+                    <div class="main_body">
+                        <%- include('./partials/sidenav.ejs', {home:1, about:0, donation:0, events:0, status:0}) %>
+
+                            <div class="container-home">
+
+                                <div class="item_wrap-left">
+                                    <div class="slogan">
+                                        <span>
+							<h1>Give a <span class="hh-home">Helping Hand</span> to those who need it</h1>
+                                        </span>
+                                    </div>
+                                    <div class="intro">
+                                        <span>
+							<h6>We provide a trusted donation channel to support people and organizations.</h6>
+						</span>
+                                    </div>
+                                    <div class="leftside-buttons">
+                                        <form action="/donationTab">
+                                            <button class="donateNow">Donate now ❤</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                                <div class="item_wrap-right">
+                                    <img src="/images/donationPicture.png" alt="">
+                                </div>
+
+                            </div>
+                    </div>
+        </div>
+
+
+
+        <!-- CHAT BAR BLOCK -->
+        <%- include('./partials/chatbot') %>
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="/js/responses.js"></script>
+            <script src="/js/chat.js"></script>
+
+            <script></script>
+    </body>
+
+    </html>

@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Ubuntu:400,500,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: #e8edf5;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper .top_navbar {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+.wrapper .top_navbar .logo {
+    width: 250px;
+    height: 100%;
+    background: #5aaca8;
+    border-bottom: 1px solid #5aaca8;
+    display: flex;
+    align-items: center;
+}
+
+.main-logo {
+    height: 3rem;
+}
+
+.wrapper .top_navbar .logo a {
+    display: block;
+    text-align: center;
+    font-size: 23px;
+    color: #fff;
+    padding: 20px 0;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.wrapper .top_navbar .top_menu {
+    width: calc(100% - 250px);
+    height: 100%;
+    background: #e8edf5;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .top_navbar .top_menu .home_link a {
+    display: block;
+    background: #5aaca8;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 3px;
+}
+
+.wrapper .top_navbar .top_menu .home_link a:hover {
+    background: #5343c7;
+    border-radius: 20px;
+}
+
+.wrapper .top_navbar .right_info {
+    display: flex;
+}
+
+.wrapper .top_navbar .right_info .icon_wrap {
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.wrapper .top_navbar .right_info .icon_wrap.login {
+    background: #fc7d71;
+    color: #fff;
+    margin-right: 1.5rem;
+    border: 1px solid #fc7d71;
+}
+
+.wrapper .top_navbar .right_info .icon_wrap.login:hover {
+    background-color: #e8edf5;
+    color: #fc7d71;
+    border: 1px solid #fc7d71;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+.wrapper .top_navbar .right_info .icon_wrap.signup {
+    background: #e8edf5;
+    color: #fc7d71;
+    border: 1px solid #fc7d71;
+}
+
+.wrapper .top_navbar .right_info .icon_wrap.signup:hover {
+    background: #fc7d71;
+    color: #fff;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+.main_body .sidebar_menu {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    background: #5aaca8;
+    width: 250px;
+    height: 100%;
+    transition: all 0.3s linear;
+}
+
+.main_body .sidebar_menu .inner__sidebar_menu {
+    position: relative;
+    padding-top: 60px;
+    font-weight: 500;
+}
+
+.main_body .sidebar_menu ul li a {
+    color: #fff;
+    font-size: 18px;
+    padding: 20px 35px;
+    display: block;
+    white-space: nowrap;
+}
+
+.main_body .sidebar_menu ul li a .icon {
+    margin-right: 8px;
+}
+
+.main_body .sidebar_menu ul li a span {
+    display: inline-block;
+}
+
+.main_body .sidebar_menu ul li a:hover {
+    background: #519c99;
+    color: #fff;
+}
+
+
+/* .main_body .sidebar_menu ul li a.active {
+  background: #e8edf5;
+  color: #22119d;
+} */
+
+
+/* ==== Inverted Border for active nav menu ===== */
+
+.main_body .sidebar_menu ul li a.active {
+    position: relative;
+    background: #e8edf5;
+    color: #5aaca8;
+    border-radius: 20px 0 0 20px;
+}
+
+
+/* .main_body .sidebar_menu ul li a.active::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: -58px;
+  height: 50px;
+  width: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 -25px 0 0 #f66969;
+} */
+
+
+/* ======================== */
+
+.main_body .sidebar_menu .hamburger {
+    position: absolute;
+    top: 5px;
+    right: -25px;
+    width: 50px;
+    height: 50px;
+    background: #e8edf5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main_body .sidebar_menu .inner_hamburger,
+.main_body .sidebar_menu .hamburger .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_body .sidebar_menu .inner_hamburger {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    background: #5aaca8;
+}
+
+.main_body .sidebar_menu .hamburger .arrow {
+    color: #fff;
+    font-size: 20px;
+}
+
+.main_body .sidebar_menu .hamburger .fa-long-arrow-alt-right {
+    display: none;
+}
+
+.main_body .container-home {
+    width: calc(100% - 250px);
+    margin-top: 65px;
+    margin-left: 250px;
+    padding: 3rem;
+    transition: all 0.3s linear;
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    height: 90vh;
+}
+
+.main_body .container-home .item_wrap-left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    font-size: 28px;
+    margin: 0.5rem;
+}
+
+.main_body .container-home .item_wrap-right img {
+    width: 36rem;
+}
+
+.main_body .container-home .item_wrap-left .leftside-buttons .donateNow {
+    text-decoration: none;
+    background: #fc7d71;
+    color: #fff;
+    border: 2px solid #fc7d71;
+    padding: 0.6rem;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.main_body .container-home .item_wrap-left .leftside-buttons .donateNow:hover {
+    color: #fc7d71;
+    background-color: #e8edf5;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+.hh-home {
+    color: #ffa32a;
+}
+
+.intro span h6 {
+    color: #818080;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.social_media {
+    position: absolute;
+    bottom: -18rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.social_media a {
+    display: block;
+    width: 40px;
+    background: #e8edf5;
+    height: 42px;
+    line-height: 45px;
+    text-align: center;
+    margin: 1rem 5px;
+    color: #5aaca8;
+    border-radius: 4px;
+}
+
+.social_media a:hover {
+    background: transparent;
+    color: #e8edf5;
+    transform: scale(1.5);
+}

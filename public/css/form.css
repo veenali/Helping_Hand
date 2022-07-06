@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Ubuntu:400,500,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.row input[type="text"],
+.row input[type="email"],
+.row textarea,
+.row select {
+    border: none;
+    outline: none;
+}
+
+.row input[type="text"]:active,
+.row input[type="email"]:active,
+.row textarea:active,
+.row select:active {
+    border: none;
+    outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+body {
+    background-color: #e8edf5;
+    color: #fff;
+}
+
+.formTitle {
+    padding-bottom: 1.5rem;
+    font-size: 24px;
+}
+
+.row {
+    margin-bottom: 0.5rem;
+}
+
+input[type="submit"] {
+    background-color: #ffffff;
+    color: #fc7d71;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #fc7d71;
+    color: #fff;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #5aaca8;
+    padding: 20px;
+    width: 60vw;
+    margin: auto;
+    -webkit-box-shadow: 3px 2px 5px 1px rgba(128, 125, 128, 1);
+    -moz-box-shadow: 3px 2px 5px 1px rgba(128, 125, 128, 1);
+    box-shadow: 3px 2px 5px 1px rgba(128, 125, 128, 1);
+    margin-top: 2rem;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.ngoName-bgColor input[type="text"] {
+    background-color: #d7d7d7;
+    cursor: none;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input[type="submit"] {
+        width: 50%;
+        margin-top: 0;
+    }
+}

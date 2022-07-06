@@ -1,0 +1,45 @@
+<div class="sidebar_menu">
+    <div class="inner__sidebar_menu">
+        <ul>
+            <li>
+                <a href="/" class="<%= home ? 'active' : '' %> ">
+                    <span class="icon"> <i class="fas fa-border-all"></i></span>
+                    <span class="list">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="/aboutTab" class="<%= about ? 'active' : '' %> ">
+                    <span class="icon"><i class="fas fa-chart-pie"></i></span>
+                    <span class="list">About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="/donationTab" class="<%= donation ? 'active' : '' %> ">
+                    <span class="icon"><i class="fas fa-address-book"></i></span>
+                    <span class="list">Donation</span>
+                </a>
+            </li>
+            <li>
+                <a href="/eventTab" class="<%= events ? 'active' : '' %> ">
+                    <span class="icon"><i class="fas fa-address-card"></i></span>
+                    <span class="list">Events</span>
+                </a>
+            </li>
+            <% if (email) { %>
+                <li>
+                    <a href="/statusTab" class="<%= status ? 'active' : '' %> ">
+                        <span class="icon"><i class="fas fa-map-marked-alt"></i></span>
+                        <span class="list">Status</span>
+                    </a>
+                </li>
+                <% } %>
+
+                    <div class="social_media">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+        </ul>
+    </div>
+</div>

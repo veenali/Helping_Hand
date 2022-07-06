@@ -1,0 +1,45 @@
+<div class="top_navbar">
+    <div class="logo">
+        <img src="/images/HH-logo.png" alt="" class="main-logo">
+        <a href="#">Helping Hand</a>
+    </div>
+    <div class="top_menu">
+        <div class="home_link">
+            <!-- <a href="#">
+                <span class="icon"><i class="fas fa-home"></i></span>
+                <span>Home</span>
+            </a> -->
+        </div>
+        <div class="right_info">
+            <% if (username || email) { %>
+                <div class="icon_wrap login" onclick="window.location= '/logout'">
+                    <div class="icon">
+                        <!-- <i class="fas fa-bell"></i> -->
+                        <span class="logout">Logout</span>
+                    </div>
+                </div>
+                <% if (usertype==='ngo') { %>
+                    <div class="icon_wrap login">
+                        <div class="icon">
+                            <!-- <i class="fas fa-bell"></i> -->
+                            <span class="logout">Request a campaign</span>
+                        </div>
+                    </div>
+                    <% } %>
+                        <% } else { %>
+                            <div class="icon_wrap login" onclick="window.location= '/loginSignUp'">
+                                <div class="icon">
+                                    <!-- <i class="fas fa-bell"></i> -->
+                                    <span class="login">Login</span>
+                                </div>
+                            </div>
+                            <div class="icon_wrap signup" onclick="window.location= '/loginSignUp'">
+                                <div class="icon">
+                                    <!-- <i class="fas fa-cog"></i> -->
+                                    <span class="signup">Sign Up</span>
+                                </div>
+                            </div>
+                            <% } %>
+        </div>
+    </div>
+</div>

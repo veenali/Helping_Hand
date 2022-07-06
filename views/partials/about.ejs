@@ -1,0 +1,74 @@
+<%- include('./header') %>
+    <link rel="stylesheet" href="/css/about.css">
+
+    <body>
+        <div class="wrapper">
+            <%- include('./topnav') %>
+
+                <div class="main_body">
+                    <%- include('./sidenav.ejs', {home:0, about:1, donation:0, events:0, status:0}) %>
+
+                        <div class="container-home">
+                            <div class="mission">
+                                <div class="mission-content">
+                                    <h1>Our Mission</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi esse aperiam tempora officiis eaque in adipisci quod quia molestias! Sunt, voluptatibus laboriosam nesciunt natus recusandae vitae distinctio tenetur.
+                                        Deserunt, obcaecati.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi esse aperiam tempora officiis eaque in adipisci quod quia molestias! Sunt, voluptatibus laboriosam nesciunt natus recusandae vitae distinctio tenetur.
+                                        Deserunt, obcaecati.
+                                    </p>
+                                </div>
+                                <div class="mission-pic">
+                                    <img src="/images/missionPic.jpg" alt="missionPic">
+                                </div>
+                            </div>
+
+                            <div class="vision">
+                                <div class="vision-pic">
+                                    <img src="/images/visionPic.jpg" alt="missionPic">
+                                </div>
+                                <div class="vision-content">
+                                    <h1>Our Vision</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi esse aperiam tempora officiis eaque in adipisci quod quia molestias! Sunt, voluptatibus laboriosam nesciunt natus recusandae vitae distinctio tenetur.
+                                        Deserunt, obcaecati.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi esse aperiam tempora officiis eaque in adipisci quod quia molestias! Sunt, voluptatibus laboriosam nesciunt natus recusandae vitae distinctio tenetur.
+                                        Deserunt, obcaecati.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="values">
+                                <div class="values-content">
+                                    <h1>Our Values</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi esse aperiam tempora officiis eaque in adipisci quod quia molestias! Sunt, voluptatibus laboriosam nesciunt natus recusandae vitae distinctio tenetur.
+                                        Deserunt, obcaecati.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi esse aperiam tempora officiis eaque in adipisci quod quia molestias! Sunt, voluptatibus laboriosam nesciunt natus recusandae vitae distinctio tenetur.
+                                        Deserunt, obcaecati.
+                                    </p>
+                                </div>
+                                <div class="values-pic">
+                                    <img src="/images/valuesPic.jpg" alt="valuesPic">
+                                </div>
+                            </div>
+
+
+                        </div>
+                </div>
+
+
+
+                <!-- CHAT BAR BLOCK -->
+                <%- include('./chatbot') %>
+
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <script src="/js/responses.js"></script>
+                    <script src="/js/chat.js"></script>
+
+                    <script></script>
+    </body>
+
+    </html>
